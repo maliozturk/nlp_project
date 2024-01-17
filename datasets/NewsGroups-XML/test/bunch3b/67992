@@ -1,0 +1,50 @@
+Xref: cantaloupe.srv.cs.cmu.edu comp.windows.x.motif:17259 comp.windows.x:67992
+Newsgroups: comp.windows.x.motif,comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!uunet!pipex!hunts.x.co.uk!ixi!guy
+From: guy@x.co.uk <true_name> (Guy Singh </true_name> )
+Subject: Re: X and Motif config-file for HP-UX 8.0 ??
+In-Reply-To: raistlin@uni-paderborn.de's message of 12 May 93 12:46:17
+Message-ID: 
+X-Disclaimer: This is not the view of IXI Ltd unless explicitly stated.
+Lines: 29
+Sender: news@x.co.uk (Usenet news administrator)
+Nntp-Posting-Host: yorks.x.co.uk
+Organization: Not a lot
+References: 
+Date: Wed, 12 May 1993 18:48:45 GMT
+X-Copyright: The author asserts the right of paternity in this message.
+
+>>>>> On 12 May 93 12:46:17, raistlin@uni-paderborn.de (<true_name> Markus Koch </true_name> ) said:
+<true_name> Markus </true_name> > NNTP-Posting-Host: samos.uni-paderborn.de
+
+
+<true_name> Markus </true_name> > Hello everybody out there !
+
+<true_name> Markus </true_name> > I'm trying to compile X11R5pl23 and Motif 1.2.1 on a HP running
+<true_name> Markus </true_name> > HP-UX 8.05. But it' seems to be not very succesful, because 
+Markus> I have only hp.cf config-files for HP-UX 7.0. 
+
+<true_name> Markus </true_name> > I tried standard cc and X was compiled with a lot of warnings.
+<true_name> Markus </true_name> > The motif applications are compiled quite well, but they won't run.
+<true_name> Markus </true_name> > I receive the XKeysymDB error which is reported in FAQ, but
+<true_name> Markus </true_name> > I cannot fix it. The XKeysymDB-file is at the right location and it
+<true_name> Markus </true_name> > works fine under SunOS.
+<true_name> Markus </true_name> > Probably I have started the compilation Prozess only with a wrong
+<true_name> Markus </true_name> > config-file.
+
+<true_name> Markus </true_name> > Please help me !
+<true_name> Markus </true_name> >   
+<true_name> Markus </true_name> > Thanx in advance 
+<true_name> Markus </true_name> >   <true_name> Markus
+
+ </true_name> If you installed X lib Xt by redefining ProjectRoot, you will find that
+ during the install it recompiles one of the files in X lib that does the
+search for XKeysmDB and embeds the search path for the file based on whatever
+ProjectRoot was defined. TO confirm this what happened, because I'm 
+guessing, go to mit/lib/X and do
+strings XStrKeySym.o | egrep XKeysymDB
+--
+-<true_name> Guy Singh </true_name> ,                 IXI            Internet: guy@x.co.uk
+                            Vision Park    UUCP:     guy@ixi.uucp
+                            Cambridge      Bang:     ...!uunet!ixi!guy
+                            CB4 4ZR, UK    Tel:      +44 223 236 555

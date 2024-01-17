@@ -1,0 +1,33 @@
+Newsgroups: comp.graphics
+Path: cantaloupe.srv.cs.cmu.edu!rochester!udel!bogus.sura.net!news-feed-1.peachnet.edu!emory!europa.eng.gtefsd.com!howland.reston.ans.net!ira.uka.de!math.fu-berlin.de!informatik.tu-muenchen.de!bockamp
+From: bockamp@Informatik.TU-Muenchen.DE (<true_name> Florian Bockamp </true_name> )
+Subject: Matrox PG-1281 CV Windows driver
+Originator: bockamp@hphalle3a.informatik.tu-muenchen.de
+Sender: news@Informatik.TU-Muenchen.DE (USENET Newssystem)
+Organization: Technische Universitaet Muenchen, Germany
+Date: Tue, 27 Apr 1993 13:55:25 GMT
+Message-ID: 
+Lines: 22
+
+
+
+Hi!
+
+I need a Windows 3.1 driver for the Matrox PG-1281 CV
+SVGA card. 
+At the moment Windows runs only in the 640x480 mode.
+If you have a driver for this card, please send it 
+with the OEMSETUP.INF to 
+
+bockamp@Informatik.TU-Muenchen.DE
+
+Thanks!
+
+-- 
++-----------------------------------------------------------------+
+| <true_name> Florian Bockamp                                   </true_name> '''            |
+| bockamp@informatik.tu-muenchen.de               (o o)           |
++---------------------------------------------oOO--( )--OOo-------+
+|                                                   -             |
+|         "It's not a bug, it's an undocumented feature!"         |
++-----------------------------------------------------------------+

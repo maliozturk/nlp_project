@@ -1,0 +1,63 @@
+Xref: cantaloupe.srv.cs.cmu.edu comp.unix.aix:24274 comp.windows.x:67154
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!noc.near.net!uunet!airgun!ep130.wg2.waii.com!ep130!dla
+From: dla@se05.wg2.waii.com (<true_name> Doug Acker </true_name> )
+Newsgroups: comp.unix.aix,comp.windows.x
+Subject: Re: build X11R5 with xlc 1.2.1 (Aix 3.2.3e)
+Message-ID: 
+Date: 22 Apr 93 02:02:18 GMT
+References:  
+Organization: western geophysical exploration products
+Lines: 50
+NNTP-Posting-Host: se05.wg2.waii.com
+In-reply-to: dla@se05.wg2.waii.com's message of 22 Apr 1993 01:02:41 GMT
+
+>>>>> On 22 Apr 1993 01:02:41 GMT, dla@se05.wg2.waii.com (<true_name> Doug Acker </true_name> ) said:
+	Doug> NNTP-Posting-Host: se05.wg2.waii.com
+
+>>>>> On 21 Apr 1993 03:49:16 GMT, dla@se05.wg2.waii.com (<true_name> Doug Acker </true_name> ) said:
+	<true_name> Doug </true_name> > NNTP-Posting-Host: se05.wg2.waii.com
+	<true_name> Doug </true_name> > I  am  having  a  big problem trying to build MIT X11R5 with xlc 1.2.1
+	<true_name> Doug </true_name> > (the  one  bundled  with  AIX  3.2.3e).   Its almost the linker is not
+	<true_name> Doug </true_name> > working properly with shared libraries.
+
+	<true_name> Doug </true_name> > I've built X11R5 with no problem before .. but now its all  headaches.
+	<true_name> Doug </true_name> > For example, the xset client complains that libXmu doesnt have a bunch
+	<true_name> Doug </true_name> > of Xt routines and shr.o is missing (or  something  like  that).   The
+	<true_name> Doug </true_name> > build of libXmu DOES link in libXt  so I am really perplexed  what  is
+	<true_name> Doug </true_name> > going on.
+
+
+	<true_name> Doug </true_name> > ....following up on this, the specific error I get is:
+	<true_name> Doug </true_name> > Could not load program ./xset 
+	<true_name> Doug </true_name> > Symbol XtVaSetValues in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtName in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtWindowOfObject in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtGetConstraintResourceList in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtDisplayToApplicationContext in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtAppSetTypeConverter in ../.././lib/Xmu/libXmu.a is undefined
+
+
+
+
+
+
+
+
+	<true_name> Doug </true_name> > Symbol XtScreenDatabase in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtResolvePathname in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtCvtStringToFont in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtCallConverter in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Symbol XtDisplayStringConversionWarning in ../.././lib/Xmu/libXmu.a is undefined
+	<true_name> Doug </true_name> > Could not load library libXmu.a[shr.o]
+	<true_name> Doug </true_name> > Error was: Exec format error
+
+
+....  a  search  on  IBMLINK  revealed that this is similar to IX33890
+(howervre this was closed USE).
+--
+<true_name> Douglas L.Acker                 </true_name> Western Geophysical Exploration Products
+____    ____     ____          a division of Western Atlas International Inc.
+\   \  /   /\   /   /\         A Litton / Dresser Company
+ \   \/   /  \ /   /  \        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  \  /   / \  /   /\   \       Internet  :  acker@wg2.waii.com
+   \/___/   \/___/  \___\      Voice     :  (713) 964-6128
